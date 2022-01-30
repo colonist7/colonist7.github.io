@@ -1,17 +1,26 @@
 import React from 'react';
-
-const About = () => {
-	return <h1>About</h1>;
-};
-
-const Home = () => {
-	return <h1>Home</h1>;
-};
+import { About } from '../About/About';
+import { Companies } from '../Companies/Companies';
+import { Contact } from '../Contact/Contact';
+import { Home } from '../Home/Home';
+import { Projects } from '../Projects/Projects';
 
 export const routes = {
 	About: {
 		path: '/About',
 		main: <About />,
+	},
+	Companies: {
+		path: '/Companies',
+		main: <Companies />,
+	},
+	Projects: {
+		path: '/Projects',
+		main: <Projects />,
+	},
+	Contact: {
+		path: '/Contact',
+		main: <Contact />,
 	},
 	Home: {
 		path: '/',
