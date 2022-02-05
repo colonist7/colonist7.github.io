@@ -44,6 +44,7 @@ export const MenuBase = styled.div`
 	flex-direction: column;
 	background: ${colors.primary};
 	transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	z-index: 20;
 
 	a {
 		color: #fff;
