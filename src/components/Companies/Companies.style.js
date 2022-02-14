@@ -103,22 +103,23 @@ export const CompanyCardBase = styled.div`
 	.image-wrapper {
 		width: 200px;
 		height: 200px;
-		border: 1px solid white;
 		border-radius: 50%;
 		overflow: hidden;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: all 0.3s ease-in-out;
-		padding: 20px;
 		margin: 0 auto 30px;
+		border: 1px solid white;
+		transition: all 0.3s ease-in-out;
 
 		&:hover {
 			box-shadow: 0 0 10px 10px green;
 		}
 
 		img {
-			width: 200px;
+			width: 100%;
+			object-fit: cover;
+			height: 100%;
 			display: block;
 		}
 	}

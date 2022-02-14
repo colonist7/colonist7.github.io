@@ -10,27 +10,14 @@ import hobbystudio from '../../assets/images/hobbystudio.png';
 
 const cards = [
 	{
-		title: 'HobbyStudio',
-		image: hobbystudio,
-		description: `Digital Agency HobbyStudio based in Tbilisi, Georgia, was founded in 2010.
-		Our team has created a lot of interesting web projects, photos and designs for local and foreign companies.
-		Our clients are large and small companies, hotels, manufacturers, restaurants, online shops and many others. Our experienced professionals bring to life best individual solutions for each of theme.`,
-
-		period: 'December 2018 - October 2019',
-		position: 'Markup Developer',
-		technologies: 'HTML | CSS | SCSS | JQuery | PHP',
-		left: 'HOBBY',
-		right: 'STUDIO',
-	},
-	{
-		title: 'Weber Informatics',
-		description: `We are a fast growing software development company. Our clients are 100% from the German speaking part of Europe (Germany, Austria and Swiss). Our goal is it to provide high quality software.`,
-		image: weber,
-		period: 'October 2010 - June 2021',
-		position: 'Junior / Middle Front-End Developer',
-		technologies: 'Angular JS | React JS | SCSS | HTML',
-		left: 'WEBER IN',
-		right: 'FORMATICS',
+		title: 'Moodia Software and Solutions',
+		image: moodia,
+		description: `We develop individual software solutions and interfaces to optimize the work process for you and your team.`,
+		period: 'September 2021 - Current',
+		position: 'Lead Front-end Developer',
+		technologies: 'React JS | TypeScript | Angular JS | SCSS | HTML',
+		left: 'MOO',
+		right: 'DIA',
 	},
 	{
 		title: 'Leavingstone',
@@ -65,14 +52,27 @@ const cards = [
 		right: 'GSTONE',
 	},
 	{
-		title: 'Moodia Software and Solutions',
-		image: moodia,
-		description: `We develop individual software solutions and interfaces to optimize the work process for you and your team.`,
-		period: 'September 2021 - Current',
-		position: 'Lead Front-end Developer',
-		technologies: 'React JS | TypeScript | Angular JS | SCSS | HTML',
-		left: 'MOO',
-		right: 'DIA',
+		title: 'Weber Informatics',
+		description: `We are a fast growing software development company. Our clients are 100% from the German speaking part of Europe (Germany, Austria and Swiss). Our goal is it to provide high quality software.`,
+		image: weber,
+		period: 'October 2010 - June 2021',
+		position: 'Junior / Middle Front-End Developer',
+		technologies: 'Angular JS | React JS | SCSS | HTML',
+		left: 'WEBER IN',
+		right: 'FORMATICS',
+	},
+	{
+		title: 'HobbyStudio',
+		image: hobbystudio,
+		description: `Digital Agency HobbyStudio based in Tbilisi, Georgia, was founded in 2010.
+		Our team has created a lot of interesting web projects, photos and designs for local and foreign companies.
+		Our clients are large and small companies, hotels, manufacturers, restaurants, online shops and many others. Our experienced professionals bring to life best individual solutions for each of theme.`,
+
+		period: 'December 2018 - October 2019',
+		position: 'Markup Developer',
+		technologies: 'HTML | CSS | SCSS | JQuery | PHP',
+		left: 'HOBBY',
+		right: 'STUDIO',
 	},
 ];
 
