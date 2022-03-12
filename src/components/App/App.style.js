@@ -1,4 +1,5 @@
 import { fadeOut } from 'react-animations';
+import calc from '../../assets/fonts/digital-7.ttf';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
 const fadeOutAnimation = keyframes`${fadeOut}`;
@@ -143,6 +144,11 @@ export const Curtains = styled.div`
 export const AppBase = styled.div``;
 
 const GlobalStyle = createGlobalStyle`	
+	@font-face {
+		font-family: Calculator;
+		src: url(${calc});
+	}
+	
 	* {
 		box-sizing: border-box;
 	}
@@ -159,6 +165,11 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 16px;
 		font-family: Open-Sans, Helvetica, Sans-Serif;	
 		background: #000006;
+
+		
+		h1,h2,h3 {
+			font-family: Calculator;	
+		}
 
 	}
 `;

@@ -70,6 +70,7 @@ export const CompanyCardBase = styled.div`
 		left: 0;
 		top: 0;
 		transition: all 0.7s ease-in-out;
+		font-family: Calculator;
 		pointer-events: none;
 	}
 
@@ -88,6 +89,7 @@ export const CompanyCardBase = styled.div`
 		top: 0;
 		transition: all 0.7s ease-in-out;
 		pointer-events: none;
+		font-family: Calculator;
 	}
 
 	&:hover {

@@ -51,5 +51,6 @@ export const MenuBase = styled.div`
 		text-decoration: none;
 		font-size: 20px;
 		margin-bottom: 20px;
+		font-family: Calculator;
 	}
 `;
