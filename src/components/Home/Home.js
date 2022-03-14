@@ -195,8 +195,8 @@ export const Home = () => {
 				setGameOver(true);
 			}
 
-			setCircleX(circleX + Math.cos(realRadian));
-			setCircleY(circleY - Math.sin(realRadian));
+			setCircleX(circleX + Math.cos(realRadian) / 20);
+			setCircleY(circleY - Math.sin(realRadian) / 20);
 		}
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////
