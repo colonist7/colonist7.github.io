@@ -7,6 +7,7 @@ import leavingstone from '../../assets/images/leavingstone.jpg';
 import moodia from '../../assets/images/moodia.jpg';
 import weber from '../../assets/images/weber.png';
 import hobbystudio from '../../assets/images/hobbystudio.png';
+import { Heading } from '../Heading/Heading';
 
 const cards = [
 	{
@@ -86,7 +87,7 @@ export const Companies = () => {
 			{/* </div> */}
 			<Container>
 				<Row>
-					<h1>Companies!</h1>
+					<Heading text='COMPANIES' />
 					{cards.map((x, i) => {
 						return <CompanyCard card={x} />;
 					})}
@@ -120,7 +121,7 @@ export const CompanyCard = ({ card }) => {
 								</p>
 								<p>{card.description}</p>
 								<div className='mt-3 mb-4'>
-									<strong>Technologies:</strong> <i>{card.technologies}</i>
+									<strong>Technologies:</strong> <span>{card.technologies}</span>
 								</div>
 								<ButtonPrimary style={{ margin: 'auto' }}>See More</ButtonPrimary>
 							</div>

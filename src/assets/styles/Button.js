@@ -9,4 +9,5 @@ export const ButtonPrimary = styled.div`
 	align-items: center;
 	background: ${colors.teritariry};
 	color: #fff;
+	font-family: Calculator;
 `;

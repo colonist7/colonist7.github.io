@@ -61,7 +61,7 @@ export const CompanyCardBase = styled.div`
 		text-align: right;
 		width: 50%;
 		height: 100%;
-		background: #000006;
+		background: #000;
 		display: flex;
 		align-items: center;
 		font-size: 40px;
@@ -80,7 +80,7 @@ export const CompanyCardBase = styled.div`
 		text-align: left;
 		width: 50%;
 		height: 100%;
-		background: #000006;
+		background: #000;
 		display: flex;
 		align-items: center;
 		font-size: 40px;

@@ -1,5 +1,8 @@
 import { fadeOut } from 'react-animations';
 import calc from '../../assets/fonts/digital-7.ttf';
+import spaceMono from '../../assets/fonts/SpaceMono-Regular.ttf';
+import spaceMonoItalic from '../../assets/fonts/SpaceMono-Italic.ttf';
+import spaceMonoBold from '../../assets/fonts/SpaceMono-Bold.ttf';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
 const fadeOutAnimation = keyframes`${fadeOut}`;
@@ -148,6 +151,22 @@ const GlobalStyle = createGlobalStyle`
 		font-family: Calculator;
 		src: url(${calc});
 	}
+
+	@font-face {
+		font-family: SpaceMono;
+		src: url(${spaceMono});
+	}
+	/* @font-face {
+		font-family: SpaceMono;
+		src: url(${spaceMonoItalic});
+		font-style: italic, oblique;
+	} */
+	
+	@font-face {
+		font-family: SpaceMono;
+		src: url(${spaceMonoBold});
+		font-weight: bold;
+	}
 	
 	* {
 		box-sizing: border-box;
@@ -163,11 +182,11 @@ const GlobalStyle = createGlobalStyle`
 		color: #fff;
 		background: teal;	
 		font-size: 16px;
-		font-family: Open-Sans, Helvetica, Sans-Serif;	
-		background: #000006;
+		font-family: SpaceMono;	
+		background: #000000;
 
 		
-		h1,h2,h3 {
+		h1,h2,h3,h4 {
 			font-family: Calculator;	
 		}
 

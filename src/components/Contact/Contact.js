@@ -3,6 +3,7 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Heading } from '../Heading/Heading';
 import { ContactBase } from './Contact.style';
 
 const step = 20;
@@ -85,10 +86,6 @@ export const Contact = () => {
 		setY(newY);
 	};
 
-	useEffect(() => {
-		// console.log(x, y);
-	}, [x, y]);
-
 	const trackMovement = (x, y) => {
 		if (x >= intersectionCoordinates.h[1] - 30) {
 			if (direction === directions.TOP_RIGHT) {
@@ -161,24 +158,7 @@ export const Contact = () => {
 		<ContactBase>
 			<Container>
 				<Row>
-					<h1 className='heading'>
-						<span>C</span>
-						<span>O</span>
-						<span>N</span>
-						<span>T</span>
-						<span>A</span>
-						<span>C</span>
-						<span>T</span>
-						<h1 className='heading2'>
-							<span>C</span>
-							<span>O</span>
-							<span>N</span>
-							<span>T</span>
-							<span>A</span>
-							<span>C</span>
-							<span>T</span>
-						</h1>
-					</h1>
+					<Heading text={'CONTACT'} />
 					<Col className='contacts'>
 						<div
 							ref={light}

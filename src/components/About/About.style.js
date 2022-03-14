@@ -5,6 +5,11 @@ export const AboutBase = styled.div`
 	text-align: center;
 	padding-bottom: 100px;
 
+	h4 {
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+
 	${ParallaxBase} {
 		width: 250px;
 		height: 250px;

@@ -17,9 +17,7 @@ export const About = () => {
 							<Image src={profile} />
 						</div>
 						<h3>David Sergeev</h3>
-						<p>
-							<i>Front-end Developer</i>
-						</p>
+						<p>Front-end Developer</p>
 						<br />
 						<br />
 						<p>
@@ -28,7 +26,7 @@ export const About = () => {
 							<br />
 							<br />
 							Well, now seriously... I am a front-end developer with more then 3 years of experience. last
-							two years I am working in a german E-commerce company "Moodia softwate and solutions",
+							two years I was working in a german E-commerce company "Moodia softwate and solutions",
 							developing online shops with a common core and a specific features, building and improving
 							CMS systems for shop administrators. Also I was working as a markup developer for one year.
 							<br />
@@ -36,11 +34,11 @@ export const About = () => {
 							<h4>Tech Stack</h4>
 							<p>
 								<strong>Programming languages and Frameworks:</strong> JavaScript, ReactJS (Hooks,
-								Redux), AngularJS<i> (also experienced in PHP, Java, .NET, VueJS, MySQL, msSQL )</i>
+								Redux), AngularJS (also experienced in PHP, Java, .NET, VueJS, MySQL, msSQL )
 							</p>
 							<p>
-								<strong>Bundling:</strong> Webpack, Gulp{' '}
-								<i>(Low experience in both, but might be improved soon, if needed)</i>
+								<strong>Bundling:</strong> Webpack, Gulp (Low experience in both, but might be improved
+								soon, if needed)
 							</p>
 							<p>
 								<strong>Markup:</strong> HTML, CSS, SCSS / SASS, Bootstrap, MaterialUI, Styled
