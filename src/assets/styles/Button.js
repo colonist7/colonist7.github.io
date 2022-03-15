@@ -8,6 +8,6 @@ export const ButtonPrimary = styled.div`
 	justify-content: center;
 	align-items: center;
 	background: ${colors.teritariry};
-	color: #fff;
+	color: #f4f4f4;
 	font-family: Calculator;
 `;

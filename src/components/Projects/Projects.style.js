@@ -1,15 +1,9 @@
 import styled from 'styled-components';
+import { colors } from '../../assets/templateVars';
 import { ParallaxBase } from '../Parallax/Parallax.style';
 
 export const ProjectsBase = styled.div`
 	${ParallaxBase} {
-		width: 250px;
-		height: 250px;
-		border-radius: 50%;
-		border: 1px solid white;
-		box-shadow: 0 0 10px 10px green;
-		position: absolute;
-		transition: 0.3s;
 		z-index: 10;
 	}
 
@@ -19,14 +13,32 @@ export const ProjectsBase = styled.div`
 
 	${ParallaxBase}:nth-child(2) {
 		right: 90px;
+		animation-delay: 2s;
 	}
 
 	${ParallaxBase}:nth-child(3) {
 		left: 90px;
+		animation-delay: 4s;
 	}
 
 	${ParallaxBase}:nth-child(4) {
 		right: 90px;
+		animation-delay: 6s;
+	}
+
+	${ParallaxBase}:nth-child(5) {
+		left: 90px;
+		animation-delay: 2s;
+	}
+
+	${ParallaxBase}:nth-child(6) {
+		right: 90px;
+		animation-delay: 4s;
+	}
+
+	${ParallaxBase}:nth-child(7) {
+		left: 90px;
+		animation-delay: 6s;
 	}
 
 	.block-inner {
@@ -41,15 +53,18 @@ export const ProjectsBase = styled.div`
 		position: relative;
 	}
 
+	.block-inner:hover ~ .project-hover {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.project-hover:hover {
+		opacity: 1;
+		pointer-events: all;
+	}
+
 	.projects-block {
 		position: relative;
-
-		&:hover {
-			.project-hover {
-				opacity: 1;
-				pointer-events: all;
-			}
-		}
 
 		.image-wrapper {
 			position: relative;
@@ -63,7 +78,7 @@ export const ProjectsBase = styled.div`
 		}
 
 		p {
-			color: #fff;
+			color: #f4f4f4;
 			text-decoration: none !important;
 			margin-top: 20px;
 		}
@@ -87,7 +102,7 @@ export const ProjectsBase = styled.div`
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: rgba(0, 0, 0, 1);
+		background: #121212;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -100,7 +115,7 @@ export const ProjectsBase = styled.div`
 			margin-bottom: 30px;
 			font-size: 50px;
 			user-select: none;
-			text-shadow: 0 0 5px rgba(0 255 0);
+			text-shadow: 0 0 5px ${colors.textShadow};
 		}
 
 		a {

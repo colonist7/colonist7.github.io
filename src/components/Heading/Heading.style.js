@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../assets/templateVars';
 
 export const HeadingBase = styled.div`
 	.heading {
@@ -12,8 +13,8 @@ export const HeadingBase = styled.div`
 		span {
 			margin: 0 10px;
 			opacity: 1;
-			color: #fff;
-			text-shadow: 0 0 5px rgba(0 255 0);
+			color: #f4f4f4;
+			text-shadow: 0 0 10px ${colors.textShadow};
 		}
 
 		& > span:nth-child(5) {
@@ -39,12 +40,12 @@ export const HeadingBase = styled.div`
 			left: 50%;
 			transform: translateX(-50%);
 			z-index: -1;
-			color: #0f0;
+			color: ${colors.teritariry};
 			text-shadow: unset;
 			display: block;
 
 			span {
-				color: #0f0;
+				color: ${colors.teritariry};
 				z-index: -1;
 			}
 		}

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Heading } from '../Heading/Heading';
+import { colors } from '../../assets/templateVars';
 import { ContactBase } from './Contact.style';
 
 const step = 20;
@@ -186,7 +187,7 @@ export const Contact = () => {
 								onMouseLeave={(e) => {
 									setAnimate(true);
 									setHovered(false);
-									light.current.style.boxShadow = `0 0 60px 30px green`;
+									light.current.style.boxShadow = `0 0 60px 30px ` + colors.teritariry;
 								}}>
 								<a
 									target='_blank'

@@ -12,7 +12,7 @@ export const Parallax = ({ startTop }) => {
 	window.addEventListener('scroll', (e) => {
 		if (ref.current) {
 			if (window.pageYOffset > startTop - 700) {
-				setTop(startTop + (window.pageYOffset - startTop) / 3);
+				setTop(startTop + (window.pageYOffset - startTop) / 5);
 				// setScale(1 - (window.pageYOffset - startTop) / 1000);
 			}
 		}

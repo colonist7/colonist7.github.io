@@ -14,7 +14,7 @@ export const BurgerMenuBase = styled.div`
 		width: 100%;
 		height: 3px;
 		margin-bottom: 10px;
-		background: #fff;
+		background: ${colors.white};
 		transition: all 0.3s ease-in-out;
 	}
 
@@ -47,7 +47,7 @@ export const MenuBase = styled.div`
 	z-index: 20;
 
 	a {
-		color: #fff;
+		color: #f4f4f4;
 		text-decoration: none;
 		font-size: 20px;
 		margin-bottom: 20px;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../assets/templateVars';
 import calc from '../../assets/fonts/digital-7.ttf';
 
 export const ContactBase = styled.div`
@@ -18,8 +19,8 @@ export const ContactBase = styled.div`
 		span {
 			margin: 0 10px;
 			opacity: 1;
-			color: #fff;
-			text-shadow: 0 0 5px rgba(0 255 0);
+			color: #f4f4f4;
+			text-shadow: 0 0 5px ${colors.textShadow};
 		}
 
 		& > span:nth-child(5) {
@@ -41,7 +42,7 @@ export const ContactBase = styled.div`
 			z-index: -1;
 
 			span {
-				color: #0f0;
+				color: ${colors.teritariry};
 				z-index: -1;
 			}
 		}
@@ -68,7 +69,7 @@ export const ContactBase = styled.div`
 			}
 
 			a {
-				color: #fff;
+				color: #f4f4f4;
 				text-decoration: none;
 			}
 		}
@@ -77,7 +78,7 @@ export const ContactBase = styled.div`
 	.light {
 		width: 1px;
 		height: 1px;
-		box-shadow: 0 0 60px 30px green;
+		box-shadow: 0 0 60px 30px ${colors.teritariry};
 		position: absolute;
 		left: 0;
 		top: 0;

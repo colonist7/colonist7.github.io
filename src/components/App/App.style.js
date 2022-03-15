@@ -2,6 +2,7 @@ import { fadeOut } from 'react-animations';
 import calc from '../../assets/fonts/digital-7.ttf';
 import spaceMono from '../../assets/fonts/SpaceMono-Regular.ttf';
 import spaceMonoItalic from '../../assets/fonts/SpaceMono-Italic.ttf';
+import { colors } from '../../assets/templateVars';
 import spaceMonoBold from '../../assets/fonts/SpaceMono-Bold.ttf';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 
@@ -89,14 +90,14 @@ export const Curtains = styled.div`
 		width: 500px;
 		height: 10px;
 		position: absolute;
-		background: #00000c;
+		background: #121212;
 		left: 50%;
 		top: 80%;
 		transform: translateX(-50%);
-		color: #fff;
+		color: #f4f4f4;
 		line-height: 80px;
 		text-align: center;
-		text-shadow: 1px 1px blue;
+		text-shadow: 1px 1px ${colors.textShadow};
 
 		&::before {
 			content: '';
@@ -167,7 +168,16 @@ const GlobalStyle = createGlobalStyle`
 		src: url(${spaceMonoBold});
 		font-weight: bold;
 	}
+
+	.text-left {
+		text-align: left !important;
+	}
 	
+
+	.text-right {
+		text-align: right !important;
+	}
+
 	* {
 		box-sizing: border-box;
 	}
@@ -179,11 +189,11 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		padding: 0;
-		color: #fff;
+		color: #f4f4f4;
 		background: teal;	
 		font-size: 16px;
 		font-family: SpaceMono;	
-		background: #000000;
+		background: #121212;
 
 		
 		h1,h2,h3,h4 {
@@ -191,6 +201,15 @@ const GlobalStyle = createGlobalStyle`
 		}
 
 	}
+
+	a {
+		color: ${colors.white};
+
+		&:hover {
+			color: ${colors.white}
+		}
+	} 
+
 `;
 
 export default GlobalStyle;

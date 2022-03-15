@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { colors } from '../../assets/templateVars';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Circle, Layer, Line, Rect, Stage, Text } from 'react-konva';
 import { Heading } from '../Heading/Heading';
@@ -239,8 +240,8 @@ export const Home = () => {
 								<Line
 									points={[0, 0, STAGE_WIDTH, 0, STAGE_WIDTH, STAGE_WIDTH, 0, STAGE_WIDTH]}
 									closed
-									stroke={'#fff'}
-									shadowColor={'#0F0'}
+									stroke={'#f4f4f4'}
+									shadowColor={colors.teritariry}
 									shadowBlur={5}
 								/>
 							</Layer>
@@ -251,9 +252,9 @@ export const Home = () => {
 										height={BOARD_HEIGHT}
 										x={x}
 										y={STAGE_WIDTH - BOARD_HEIGHT}
-										fill={'#fff'}
+										fill={'#f4f4f4'}
 									/>
-									<Circle x={circleX} y={circleY} fill={'#fff'} radius={BALL_RADIUS} />
+									<Circle x={circleX} y={circleY} fill={'#f4f4f4'} radius={BALL_RADIUS} />
 									{!ballPushed && (
 										<Line
 											points={[
@@ -263,7 +264,7 @@ export const Home = () => {
 												circleY - AIM_LENGTH * Math.sin(directionAngle * (Math.PI / 180)),
 											]}
 											dashEnabled
-											stroke={'#fff'}
+											stroke={'#f4f4f4'}
 											dash={[2, 2]}
 										/>
 									)}

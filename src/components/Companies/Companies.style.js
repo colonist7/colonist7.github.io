@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../assets/templateVars';
 import { ParallaxBase } from '../Parallax/Parallax.style';
 
 export const CompaniesBase = styled.div`
@@ -8,35 +9,31 @@ export const CompaniesBase = styled.div`
 		text-align: center;
 	}
 
-	/* .background {
-		height: 1200px;
-		position: absolute;
-		width: 100%;
-		top: 0;
-		left: 0;
-		z-index: -1; */
-
 	${ParallaxBase} {
-		width: 250px;
-		height: 250px;
-		border-radius: 50%;
-		border: 1px solid white;
-		box-shadow: 0 0 10px 10px green;
-		position: absolute;
-		transition: 0.3s;
 		z-index: 10;
 	}
-
 	${ParallaxBase}:first-child {
 		left: 60px;
 	}
 
 	${ParallaxBase}:nth-child(2) {
 		right: 90px;
+		animation-delay: 2s;
 	}
 
 	${ParallaxBase}:nth-child(3) {
 		left: 90px;
+		animation-delay: 4s;
+	}
+
+	${ParallaxBase}:nth-child(4) {
+		right: 90px;
+		animation-delay: 6s;
+	}
+
+	${ParallaxBase}:nth-child(5) {
+		left: 90px;
+		animation-delay: 8s;
 	}
 	/* } */
 `;
@@ -57,11 +54,11 @@ export const CompanyCardBase = styled.div`
 
 	&:before {
 		content: '${({ contentLeft }) => contentLeft}';
-		color: #fff;
+		color: #f4f4f4;
 		text-align: right;
 		width: 50%;
 		height: 100%;
-		background: #000;
+		background: #121212;
 		display: flex;
 		align-items: center;
 		font-size: 40px;
@@ -76,11 +73,11 @@ export const CompanyCardBase = styled.div`
 
 	&:after {
 		content: '${({ contentRight }) => contentRight}';
-		color: #fff;
+		color: #f4f4f4;
 		text-align: left;
 		width: 50%;
 		height: 100%;
-		background: #000;
+		background: #121212;
 		display: flex;
 		align-items: center;
 		font-size: 40px;
@@ -115,7 +112,7 @@ export const CompanyCardBase = styled.div`
 		transition: all 0.3s ease-in-out;
 
 		&:hover {
-			box-shadow: 0 0 10px 10px green;
+			box-shadow: 0 0 10px 10px ${colors.teritariry};
 		}
 
 		img {

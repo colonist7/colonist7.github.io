@@ -84,6 +84,8 @@ export const Companies = () => {
 			<Parallax startTop={100} />
 			<Parallax startTop={700} />
 			<Parallax startTop={1200} />
+			<Parallax startTop={1800} />
+			<Parallax startTop={2300} />
 			{/* </div> */}
 			<Container>
 				<Row>
