@@ -3,12 +3,21 @@ import { ParallaxBase } from '../Parallax/Parallax.style';
 import { colors } from '../../assets/templateVars';
 
 export const AboutBase = styled.div`
+	animation: SlideFromUp 0.3s linear;
+	width: 100%;
+	height: 100%;
+
 	text-align: center;
 	padding-bottom: 100px;
 
-	h4 {
-		margin-top: 30px;
-		margin-bottom: 15px;
+	h3 {
+		font-weight: bold;
+		font-family: SpaceMono;
+		margin-bottom: 20px;
+	}
+
+	.position {
+		color: ${colors.textShadow};
 	}
 
 	${ParallaxBase}:first-child {
@@ -51,14 +60,25 @@ export const AboutBase = styled.div`
 			word-break: nowrap;
 			align-items: center;
 			position: static;
+			font-weight: bold;
+			font-family: SpaceMono;
+			margin-bottom: 20px;
 
 			&:after {
 				content: '';
-				width: calc(100% - 140px);
+				width: calc(100% - 180px);
 				height: 2px;
 				background-color: ${colors.teritariry};
 				margin-left: auto;
 			}
+		}
+	}
+
+	.soft-skills {
+		h4 {
+			font-weight: bold;
+			font-family: SpaceMono;
+			margin-bottom: 20px;
 		}
 	}
 `;

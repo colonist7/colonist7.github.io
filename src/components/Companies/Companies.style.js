@@ -3,7 +3,7 @@ import { colors } from '../../assets/templateVars';
 import { ParallaxBase } from '../Parallax/Parallax.style';
 
 export const CompaniesBase = styled.div`
-	height: 1200px;
+	animation: SlideFromUp 0.3s linear;
 
 	h1 {
 		text-align: center;

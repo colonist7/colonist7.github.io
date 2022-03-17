@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Image, Row, Col } from 'react-bootstrap';
 import profile from '../../assets/images/profile.jpg';
+import { Heading } from '../Heading/Heading';
 import { Parallax } from '../Parallax/Parallax';
 import { AboutBase } from './About.style';
 
@@ -11,11 +12,16 @@ export const About = () => {
 			<Parallax startTop={700} />
 			<Parallax startTop={1200} />
 			<Container>
+				<Row>
+					<Col lg={12}>
+						<Heading text={'ABOUT'} />
+					</Col>
+				</Row>
 				<Row className='mb-5'>
 					<Col lg={2} />
 					<Col lg={4} className='text-left'>
 						<h3>David Sergeev</h3>
-						<p>Front-end Developer</p>
+						<p className='position'>Front-end Developer</p>
 						<br />
 						<br />
 						<p>

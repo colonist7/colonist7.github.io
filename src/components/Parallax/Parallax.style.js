@@ -5,7 +5,7 @@ export const ParallaxBase = styled.div`
 	width: 250px;
 	height: 250px;
 	border-radius: 50%;
-	border: 1px solid white;
+	border: 1px solid rgb(17 91 45);
 	animation: Float 10s linear infinite;
 	box-shadow: 0 0 10px 10px ${colors.teritariry};
 	position: absolute;

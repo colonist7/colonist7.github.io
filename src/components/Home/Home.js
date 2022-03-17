@@ -3,6 +3,7 @@ import { colors } from '../../assets/templateVars';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Circle, Layer, Line, Rect, Stage, Text } from 'react-konva';
 import { Heading } from '../Heading/Heading';
+import { HomeBase } from './Home.style';
 
 const QUARTERS = [
 	{
@@ -226,7 +227,7 @@ export const Home = () => {
 	}, [radian, ballPushed, circleX, circleY]);
 
 	return (
-		<>
+		<HomeBase>
 			<Container>
 				<Row>
 					<Col lg={12}>
@@ -322,6 +323,6 @@ export const Home = () => {
 					</Col>
 				</Row>
 			</Container>
-		</>
+		</HomeBase>
 	);
 };

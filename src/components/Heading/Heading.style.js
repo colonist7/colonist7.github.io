@@ -32,11 +32,11 @@ export const HeadingBase = styled.div`
 		.heading2 {
 			font-family: Calculator;
 			font-size: 100px !important;
-			margin: 50px auto 0;
+			margin: 0 auto 0;
 			text-align: center;
 			opacity: 0.3;
 			position: absolute;
-			top: 70px;
+			top: 50px;
 			left: 50%;
 			transform: translateX(-50%);
 			z-index: -1;

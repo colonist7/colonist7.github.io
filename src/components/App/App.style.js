@@ -148,6 +148,10 @@ export const Curtains = styled.div`
 export const AppBase = styled.div``;
 
 const GlobalStyle = createGlobalStyle`	
+	html{
+	scroll-behavior: auto !important;
+}
+
 	@font-face {
 		font-family: Calculator;
 		src: url(${calc});
@@ -209,6 +213,18 @@ const GlobalStyle = createGlobalStyle`
 			color: ${colors.white}
 		}
 	} 
+
+	
+
+	@keyframes SlideFromUp {
+		0% {
+			transform: translateY(100vh);
+		}
+
+		100% {
+			transform: translate(0);
+		}
+	}
 
 `;
 

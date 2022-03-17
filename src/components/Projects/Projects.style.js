@@ -3,6 +3,8 @@ import { colors } from '../../assets/templateVars';
 import { ParallaxBase } from '../Parallax/Parallax.style';
 
 export const ProjectsBase = styled.div`
+	animation: SlideFromUp 0.3s linear;
+
 	${ParallaxBase} {
 		z-index: 10;
 	}
