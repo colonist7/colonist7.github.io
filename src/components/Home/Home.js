@@ -5,6 +5,15 @@ import { Circle, Layer, Line, Rect, Stage, Text } from 'react-konva';
 import { Heading } from '../Heading/Heading';
 import { HomeBase } from './Home.style';
 
+let brickMap = [
+	[1, 1, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 1, 1, 1, 1, 1],
+	[1, 1, 1, 1, 1, 1, 1],
+];
+
 const QUARTERS = [
 	{
 		from: 0,
@@ -57,6 +66,10 @@ export const Home = () => {
 	const BALL_RADIUS = 10;
 	const AIM_LENGTH = 100;
 	const BASE_RADIAN = Math.PI / 2;
+
+	const getBrickPosition = (row, i, j) => {
+		return { x: (STAGE_WIDTH - ((STAGE_WIDTH - 100) / 8) * row.length) / 2 + 50 * j, y: i * 20 + 30 };
+	};
 
 	const [x, setX] = useState(STAGE_WIDTH / 2 - BOARD_WIDTH / 2);
 	const [circleX, setCircleX] = useState(STAGE_WIDTH / 2);
@@ -197,8 +210,8 @@ export const Home = () => {
 				setGameOver(true);
 			}
 
-			setCircleX(circleX + Math.cos(realRadian) / 20);
-			setCircleY(circleY - Math.sin(realRadian) / 20);
+			setCircleX(circleX + Math.cos(realRadian));
+			setCircleY(circleY - Math.sin(realRadian));
 		}
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -247,29 +260,48 @@ export const Home = () => {
 								/>
 							</Layer>
 							{started && !gameOver && (
-								<Layer>
-									<Rect
-										width={BOARD_WIDTH}
-										height={BOARD_HEIGHT}
-										x={x}
-										y={STAGE_WIDTH - BOARD_HEIGHT}
-										fill={'#f4f4f4'}
-									/>
-									<Circle x={circleX} y={circleY} fill={'#f4f4f4'} radius={BALL_RADIUS} />
-									{!ballPushed && (
-										<Line
-											points={[
-												circleX,
-												circleY,
-												circleX + AIM_LENGTH * Math.cos(directionAngle * (Math.PI / 180)),
-												circleY - AIM_LENGTH * Math.sin(directionAngle * (Math.PI / 180)),
-											]}
-											dashEnabled
-											stroke={'#f4f4f4'}
-											dash={[2, 2]}
+								<>
+									<Layer>
+										{brickMap.map((row, i) => {
+											return row.map((brick, j) => {
+												return (
+													<Rect
+														key={j}
+														{...getBrickPosition(row, i, j)}
+														fill='#f4f4f4'
+														width={(STAGE_WIDTH - 100) / 7}
+														height={20}
+														stroke={'#121212'}
+														strokeWidth={4}
+													/>
+												);
+											});
+										})}
+									</Layer>
+									<Layer>
+										<Rect
+											width={BOARD_WIDTH}
+											height={BOARD_HEIGHT}
+											x={x}
+											y={STAGE_WIDTH - BOARD_HEIGHT}
+											fill={'#f4f4f4'}
 										/>
-									)}
-								</Layer>
+										<Circle x={circleX} y={circleY} fill={'#f4f4f4'} radius={BALL_RADIUS} />
+										{!ballPushed && (
+											<Line
+												points={[
+													circleX,
+													circleY,
+													circleX + AIM_LENGTH * Math.cos(directionAngle * (Math.PI / 180)),
+													circleY - AIM_LENGTH * Math.sin(directionAngle * (Math.PI / 180)),
+												]}
+												dashEnabled
+												stroke={'#f4f4f4'}
+												dash={[2, 2]}
+											/>
+										)}
+									</Layer>
+								</>
 							)}
 							{!started && !gameOver && (
 								<Layer>

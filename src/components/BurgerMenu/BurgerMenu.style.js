@@ -29,12 +29,10 @@ export const BurgerMenuBase = styled.div`
 	& > div:nth-child(2) {
 		transform: translatex(${({ isOpen }) => (isOpen ? '-100%' : 0)});
 		animation: ${({ isOpen }) => !isOpen && 'Blink 10s linear infinite'};
-		animation-delay: 0.2s;
 	}
 	& > div:nth-child(3) {
 		transform: rotate(${({ isOpen }) => (isOpen ? '-48deg' : 0)});
 		transform-origin: 3px -1px;
-		animation-delay: 0.4s;
 		animation: ${({ isOpen }) => isOpen && 'moveUp 0.5s linear'};
 	}
 
