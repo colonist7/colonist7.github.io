@@ -5,6 +5,12 @@ import { ParallaxBase } from '../Parallax/Parallax.style';
 export const ProjectsBase = styled.div`
 	animation: SlideFromUp 0.3s linear;
 
+	.p40 {
+		img {
+			padding: 40px;
+		}
+	}
+
 	${ParallaxBase} {
 		z-index: 10;
 	}

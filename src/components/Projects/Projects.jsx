@@ -4,6 +4,8 @@ import { Parallax } from '../Parallax/Parallax';
 import { ButtonPrimary } from '../../assets/styles/Button';
 import { ProjectsBase } from './Projects.style';
 import fidula from '../../assets/images/fidula.png';
+import beton2go from '../../assets/images/beton2go.png';
+import amp from '../../assets/images/amp.png';
 import nikora from '../../assets/images/nikora.png';
 import { Heading } from '../Heading/Heading';
 
@@ -23,19 +25,26 @@ const projectsArray = [
 		desc: "FIDULA: school musicals, elementary music theatre, children's musicals, voice training, lively children's choir, jazz canons, class music, school theatre, ...",
 	},
 	{
+		title: 'Beton2Go',
+		class: 'white p40',
+		url: 'https://shop.baustoffe2go.com/',
+		img: beton2go,
+		desc: "Fresh concrete at the push of a button - Massfeller's mini concrete batching plants offer a flexible, time-saving way to procure concrete in self-service.",
+	},
+	{
 		title: 'AMP Rollwin',
 		class: 'white',
 		url: 'https://www.rollaeden-shop.de/',
-		img: 'https://www.rollaeden-shop.de/templates/primarkets/themes/default/assets/images/new_logo.png',
+		img: amp,
 		desc: 'In Rolladen-Shop.de you get over 150 components for the construction and renovation of your roller shutter. We carry mechanical drives (belt winders) as well as ...',
 	},
-	{
-		title: 'Balance Werebemittel',
-		class: 'white small',
-		url: 'https://www.balance-werbemittel.de/',
-		img: 'https://www.balance-werbemittel.de/wp-content/images/Logo-Balance-2_Pantone.png',
-		desc: 'Find your individual promotional item now from over 50,000 items available at short notice - at top prices at any time. Individual promotional items.',
-	},
+	// {
+	// 	title: 'Balance Werebemittel',
+	// 	class: 'white small',
+	// 	url: 'https://www.balance-werbemittel.de/',
+	// 	img: 'https://www.balance-werbemittel.de/wp-content/images/Logo-Balance-2_Pantone.png',
+	// 	desc: 'Find your individual promotional item now from over 50,000 items available at short notice - at top prices at any time. Individual promotional items.',
+	// },
 	{
 		class: 'white',
 		title: 'Mrcheveli',
@@ -85,7 +94,7 @@ export const Projects = () => {
 				<Row>
 					{projectsArray.map((item) => (
 						<Col lg={12} className={`projects-block ${item.class}`}>
-							<a href={item.url} className='block-inner'>
+							<a href={item.url} rel='noreferrer' target='_blank' className='block-inner'>
 								<div className='image-wrapper'>
 									<img src={item.img} alt='' />
 								</div>
