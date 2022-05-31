@@ -18,13 +18,52 @@ const setDelay = (n) => {
 const HEIGHT = window.innerHeight;
 const WIDTH = window.innerWidth;
 
+const angleMap = [
+	{
+		from: 1.3,
+		to: 10,
+		transform: -20,
+	},
+	{
+		from: 1.2,
+		to: 1.3,
+		transform: -15,
+	},
+	{
+		from: 1.1,
+		to: 1.2,
+		transform: -10,
+	},
+	{
+		from: 0.9,
+		to: 1.1,
+		transform: 0,
+	},
+	{
+		from: 0.8,
+		to: 0.9,
+		transform: 10,
+	},
+	{
+		from: 0.7,
+		to: 0.8,
+		transform: 15,
+	},
+	{
+		from: 0,
+		to: 0.7,
+		transform: 20,
+	},
+];
+
 const lookTo = (x, y) => {
 	let X = WIDTH / 2 / x;
 	let Y = HEIGHT / 2 / y;
 
-	return `transform: translate(${X > 1.1 ? '-20px' : X < 0.9 ? '20px' : 0},  ${
-		Y > 1.1 ? '-20px' : Y < 0.9 ? '20px' : 0
-	})`;
+	const transformX = angleMap.find((x) => X > x.from && X < x.to)?.transform;
+	const transformY = angleMap.find((x) => Y > x.from && Y < x.to)?.transform;
+
+	return `transform: translate(${transformX}px, ${transformY}px)`;
 };
 
 export const HomeBase = styled.div`
@@ -35,9 +74,9 @@ export const Screen = styled.div`
 	width: 800px;
 	height: 600px;
 	margin: 40px auto;
-	border: 5px solid white;
-	border-radius: 10px;
-	box-shadow: 0 0 40px 10px ${colors.teritariry};
+	border: 3px solid ${colors.teritariry};
+	/* border-radius: 10px; */
+	/* box-shadow: 0 0 40px 10px ${colors.teritariry}; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -82,7 +121,7 @@ export const Screen = styled.div`
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				transition: all 0.5s ease-in-out;
+				transition: all 0.3s ease-in-out;
 
 				${({ x, y }) => lookTo(x, y)}
 			}

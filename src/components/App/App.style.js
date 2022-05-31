@@ -28,7 +28,7 @@ export const Curtains = styled.div`
 	z-index: 100;
 	top: 0;
 	left: 0;
-	background: black;
+	background: #121212;
 	animation: 1s ${fadeOutAnimation};
 	animation-delay: 2s;
 
@@ -67,7 +67,7 @@ export const Curtains = styled.div`
 				height: 5px;
 				background: transparent;
 				display: block;
-				box-shadow: 0 0 10px 0 blue;
+				box-shadow: 0 0 10px 0 ${colors.textShadow};
 			}
 
 			&::before {
@@ -79,7 +79,7 @@ export const Curtains = styled.div`
 				height: 5px;
 				background: transparent;
 				display: block;
-				box-shadow: 0 0 10px 0 blue;
+				box-shadow: 0 0 10px 0 ${colors.textShadow};
 			}
 		}
 
@@ -108,7 +108,7 @@ export const Curtains = styled.div`
 			top: 0;
 			height: 10px;
 			background: white;
-			box-shadow: 0 0 10px 0 blue;
+			box-shadow: 0 0 10px 0 ${colors.textShadow};
 			animation: 2s Loading linear;
 		}
 	}
