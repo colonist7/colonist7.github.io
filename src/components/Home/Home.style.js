@@ -72,6 +72,7 @@ export const HomeBase = styled.div`
 
 export const Screen = styled.div`
 	width: 800px;
+	position: relative;
 	height: 600px;
 	margin: 40px auto;
 	border: 3px solid ${colors.teritariry};
@@ -121,7 +122,7 @@ export const Screen = styled.div`
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				transition: all 0.3s ease-in-out;
+				transition: all 0.5s ease-in-out;
 
 				${({ x, y }) => lookTo(x, y)}
 			}
